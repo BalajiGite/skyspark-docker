@@ -16,7 +16,7 @@ Files needed to run Skyspark in a docker container while persisting the project 
 
 ## Design Notes
 
-* volumes in the compose file should be a static directory which the skyspark license and project information should live. Linux systems this can be in the top level namespace. OSX must be under the Users/{USERNAME} SPACE
+* volumes in the compose file should be a static directory which the skyspark license and project information should live. Linux systems this can be in the top level namespace. OSX must be under the `Users/{USERNAME}` SPACE
 
 * BACnet, MODBUS, Sedona (SOX) and the UI are exposed by default. If you need to use more servers add the ports in the docker-compose.yml file then edit the Dockerfile to have `EXPOSE {SERVICE_PORT}` to expose the port from the container
 
