@@ -1,0 +1,11 @@
+version: '3'
+services: 
+  skyspark:
+    build: .
+    ports:
+      - '8080:8080' # UI/API
+      - '47808:47808' # BACnet
+      - '502:502' # Modbus
+      - '1876:1876' # Sedona
+    volumes:
+      - ~/skyspark/var:/skyspark/var # Attach local filepath to container. Keeps data persistent across restarts and builds
